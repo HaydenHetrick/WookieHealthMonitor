@@ -6,31 +6,38 @@
         xmlns:local="clr-namespace:WookieHealthMonitor"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+                <!-- Path to your styles file -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Label Content="Wookie Name" Grid.Row="0"
-        Grid.Column="0"/>
-        <TextBox Name="txtName" Grid.Row="0" Grid.Column="1"/>
+        <Image Source="Assets/wookie_logo.jpg" Width="100" Height="100" HorizontalAlignment="Center" Margin="10" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-        <Label Content="Height" Grid.Row="1" Grid.Column="0"/>
+        <Label Style="{StaticResource ModernLabelStyle}" Content="Wookie Name" Grid.Row="1" Grid.Column="0"/>
+        <TextBox Style="{StaticResource ModernTextBoxStyle}" Name="txtName" Grid.Row="1" Grid.Column="1"/>
 
-        <Label Content="Weight" Grid.Row="2" Grid.Column="0"/>
-        <TextBox Name="txtWeight" Grid.Row="2" Grid.Column="1"/>
+        <Label Style="{StaticResource ModernLabelStyle}" Content="Height" Grid.Row="2" Grid.Column="0"/>
 
-        <Button Content="Calculate BMI" Grid.Row="3" Grid.Column="1"/>
+        <Label Style="{StaticResource ModernLabelStyle}" Content="Weight" Grid.Row="3" Grid.Column="0"/>
+        <TextBox Style="{StaticResource ModernTextBoxStyle}" Name="txtWeight" Grid.Row="3" Grid.Column="1"/>
 
-        <Label Name="lblResult" Grid.Row="4" Grid.Column="1" FontWeight="ExtraBold" FontSize="20"/>
+        <Button Style="{StaticResource ModernButtonStyle}" Content="Calculate BMI" Grid.Row="4" Grid.Column="1"/>
+
+        <Label Name="lblResult" Grid.Row="5" Grid.Column="1" FontWeight="Bold" FontSize="20"/>
     </Grid>
 </Window>

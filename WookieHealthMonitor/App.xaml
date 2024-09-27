@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WookieHealthMonitor"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonStyles.xaml"/>
+                <ResourceDictionary Source="LabelStyles.xaml"/>
+                <ResourceDictionary Source="TextBoxStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
          
     </Application.Resources>
 </Application>
